@@ -72,7 +72,7 @@ const LoginPage = () => {
 
         <p className="registration-link">
           Нет аккаунта? <br />
-          <Link to="/register">
+          <Link to="/register/student">
             <span>Зарегистрироваться</span>
           </Link>
         </p>
