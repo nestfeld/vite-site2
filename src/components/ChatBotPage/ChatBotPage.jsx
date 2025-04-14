@@ -27,6 +27,8 @@ const ChatBotPage = () => {
 
     history = history.map(({ role, text }) => ({ role, parts: [{ text }] }));
 
+    console.log(import.meta.env.VITE_API_URL);
+    
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
