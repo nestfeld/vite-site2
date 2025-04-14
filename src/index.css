@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Arial';
+  src: url('./fonts/arial_bolditalicmt.ttf') format('ttf'),
+       url('./fonts/arialmt.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+  color: #272727;
+}
+
+html, body{
+  height: 100%;
+  
+}

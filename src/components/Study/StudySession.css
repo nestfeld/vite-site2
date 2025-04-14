@@ -1,0 +1,169 @@
+.appContainerMain{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+}
+.cardSessionBlock{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 2px rgba(173, 173, 173, 0.304);
+    border: solid 1px rgb(221, 221, 221);
+    user-select: none;
+}
+
+.study-block-container{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(240, 229, 255) 100%); 
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.study-block-wrapper{
+    width: 600px;
+    padding: 1rem 1rem;
+}
+
+.study-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.study-control button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.study-control button:hover svg {
+    fill: rgb(105, 32, 128);
+}
+
+.study-control button svg {
+    transition: all 0.2s ease;
+}
+
+.sessionDeckName{
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 1rem
+}
+
+.card-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.thecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgb(218, 255, 208) 0%, rgb(162, 255, 152) 100%); 
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.activecard {
+    transform: rotateY(180deg);
+}
+
+.card-main-container{
+    width: 100%;
+    height: 400px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.session-end-block{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.end-btn{
+    width: 100%;
+    height: 100%;
+    background: rgb(148,53,255);
+    background: linear-gradient(184deg, rgba(148,53,255,1) 0%, rgba(220,74,255,1) 100%); 
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.end-btn:hover{
+    transform: scale(0.9);
+}
+
+.emptyDeck-block{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.emptyDeck-block h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.emptyDeck-block button{
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background: rgb(180,55,233);
+    background: linear-gradient(184deg, rgb(206, 90, 255) 0%, rgba(118,37,211,1) 100%); 
+    font-weight: 500;
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, 0.129);
+    font-size: 1.2rem;
+    transition: all 0.5s;
+}
+.emptyDeck-block button:hover { 
+    transform: scale(0.9);
+}
+
+.thefront{
+    transition: 0.3s ease;
+}
+
+.thefront:hover{
+ background-color: #eeffd9;
+}
+

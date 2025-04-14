@@ -1,0 +1,155 @@
+.deck {
+    min-width: 45%;
+    padding: 0.2rem 1rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 1px 10px 5px rgb(209, 209, 209);
+    display: flex;
+    flex-flow: column;
+}
+
+.deck-header {
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: solid 1px rgb(222, 222, 222);
+    padding: 10px 0px;
+}
+.word-creator-form{
+    display: block;
+}
+
+.word-creator-form-container{
+    width: 300px;
+    align-self: center;
+}
+.word-creator-form-container input {
+    width: 100%;
+    font-size: 16px;
+    border: solid 1px rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    padding: 5px 35px 5px 15px;
+    transition: all 0.2s;
+    background-color: #F4F4F4;
+    box-shadow: 1px 1px 3px 1px rgb(211, 211, 211);
+}
+
+.word-creator-form-container input:focus {
+    outline: solid 1px rgb(124, 124, 124);
+}
+
+.word-creator-form h3 {
+    font-weight: 400;
+    font-size: 13px;
+    color: rgb(125, 125, 125);
+    margin-bottom: 5px;
+}
+
+.word-creator-input-word-block{
+    position: relative;
+}
+
+.word-creator-input-word-block {margin-bottom: 1rem;}
+
+.translate-btn{
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.word-list-action button{
+    margin-right: 5px;
+}
+
+.word-list-action .delete {
+    background-color: #FF7072;
+    color: white;
+}
+
+.word-list-container{
+    border: solid 1px rgb(176, 176, 176);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.word-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 10px;
+}
+
+.word-list-action button {
+    padding: 5px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 1px 0px 1px rgb(198, 198, 198);
+}
+
+.word-list-action .delete:hover{
+    background-color: #d65e60;
+}
+
+.word-list-item{
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    border: solid 1px rgb(145, 145, 145);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.wl-active-item {
+    background-color: #ECBDFF;
+    border: 1px solid #ECBDFF;
+}
+
+.word-creator-form .add-btn {
+    margin: 2rem 0rem;
+}
+
+.translate-btn{
+    background-color: #CF8BF9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 3px 1px rgb(182, 182, 182);
+}
+
+.translate-btn:hover {
+    background-color: #9c58c7
+}
+
+.deck .add-btn{
+    cursor: pointer;
+    background-color: #9F70FF;
+    padding: 5px 20px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 1px rgb(182, 182, 182); 
+
+}
+
+.deck .add-btn:hover {
+    opacity: 85%;
+}
+
+.add-btn-container{
+    display: flex;
+    justify-content: center;
+}

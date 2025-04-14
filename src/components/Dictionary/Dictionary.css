@@ -1,0 +1,43 @@
+.dictionary-page--container{
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.dictCon2{
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(240, 229, 255) 100%); 
+}
+
+@media (max-width: 480px) {
+    /* Стили для смартфонов */
+}
+
+
+@media (max-width: 768px) and (max-width: 1024px) {
+    /* Стили для планшетов  */
+    
+}
+
+@media (max-width: 1280px) {
+    .dictionary-page--container {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .dictionary-page--container div {
+        width: 100%;
+    }
+
+}

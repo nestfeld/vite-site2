@@ -1,0 +1,54 @@
+.deck-list__item{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.deck-list__title, .deck-list_quantity{
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+.deck-list__start-btn{
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: solid 1px rgb(137, 137, 137);
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.deck-list__start-btn:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+.active-deck {
+    background-color: #E2DDFF;
+}
+
+.deck_list__item__info {
+    display: flex;
+    align-items: center;
+}
+
+.deck-list__quantity{
+    border-right: solid 2px;
+    border-left: solid 2px;
+    padding: 0px 5px;
+}
+
+.deck-del-btn{
+    background-color: #FF7072 !important;
+    color: white;
+}
+
+.deck-del-btn:hover {
+    opacity: 100% !important;
+    background-color: #d65e60 !important;
+}
