@@ -2,9 +2,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import lessons from "../data/lessons";
 import Header from '../Header/Header';
-import "./Lesson.css"
+import "./Lesson.scss"
 import { Link } from "react-router-dom";
 import tests from "../data/tests";
+import Footer from "../Footer/Footer";
 
 const Lesson = () => {
   let { lessonId } = useParams();
@@ -56,6 +57,7 @@ const Lesson = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

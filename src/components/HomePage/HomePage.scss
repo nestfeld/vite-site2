@@ -1,0 +1,374 @@
+/* Homepage container */
+.homepage-container {
+    width: 100%;
+}
+
+/* Hero block */
+.hero-block {
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.hero-logo {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.64);
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    max-width: 45rem;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.562);
+    line-height: 3rem;
+}
+
+.hero-btn {
+    padding: 0.5rem 2rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(184deg, rgba(180,55,233,1) 0%, rgba(118,37,211,1) 100%);
+    font-weight: 500;
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, 0.129);
+    font-size: 1.4rem;
+    transition: all 0.5s;
+}
+
+.hero-btn:hover {
+    transform: scale(0.9);
+}
+
+/* Home page auth container */
+.home-page--auth-container {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0rem;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(195, 56, 255, 1) 0%, rgba(41, 7, 46, 1) 100%);
+    z-index: 2;
+}
+
+.home-page--auth-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.485) 2px, transparent 2px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.home-page--auth-container--wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home-page--auth-container--img-container {
+    position: relative;
+    width: 50%;
+    justify-content: center;
+}
+
+.home-page--auth-container--text-block {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page--auth-container--text-block p {
+    color: white !important;
+    text-align: center;
+    max-width: 500px;
+    font-weight: bold;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    line-height: 2.3rem;
+    text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.499);
+}
+
+.home-page--auth-container--text-block span {
+    color: #FFD256;
+}
+
+.hp-auth-btn {
+    padding: 0.8rem 3rem;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(184deg, rgb(254, 180, 63) 0%, rgb(203, 101, 23) 100%);
+    font-weight: bold;
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, 0.129);
+    font-size: 1.4rem;
+    transition: all 0.5s;
+}
+
+.hp-auth-btn:hover {
+    transform: scale(0.9);
+}
+
+.phone-img {
+    width: 300px;
+    margin-top: 10rem;
+    margin-left: 5rem;
+}
+
+/* Teachers container */
+.teachers-container {
+    width: 100%;
+    margin: 3rem 0rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.teachers-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 800;
+    z-index: 3;
+}
+
+.stars {
+    margin-left: 1rem;
+    z-index: 1;
+}
+
+.teacher-cards--block {
+    padding-bottom: 2rem;
+    border-bottom: solid 2px #DEB0FF;
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 2vw;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.teacher-block img {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.227);
+}
+
+.teacher-block h2 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+/* Reviews container */
+.reviews-container {
+    width: 100%;
+    background: linear-gradient(184deg, rgb(203, 82, 240) 0%, rgb(89, 13, 108) 100%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-flow: column;
+    padding-bottom: 3rem;
+}
+
+.reviews-container h3 {
+    color: white;
+    margin-top: 3rem;
+    text-shadow: 0px 3px 20px rgba(0, 0, 0, 0.603);
+    font-size: 4rem;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.reviews-container h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white !important;
+    text-shadow: 0px 3px 15px rgba(0, 0, 0, 0.471);
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+}
+
+.reviews-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 75%;
+    margin-bottom: 3rem;
+}
+
+.review-card {
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #0F0F0F;
+    width: 400px;
+    transition: 0.4s ease all;
+    cursor: pointer;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
+
+.review-card--header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.review-card--header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+
+.review-card--header h4 {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.review-card h4,
+.review-card p {
+    color: white !important;
+    font-size: 1.4rem;
+}
+
+.review-card--body p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Media queries */
+@media (max-width: 480px) {
+    .reviews-cards-container {
+        width: 95%;
+    }
+
+    .reviews-container h3 {
+        font-size: 3rem;
+    }
+
+    .reviews-container h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .teachers-title {
+        font-size: 2rem !important;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    .teachers-title img {
+        position: absolute;
+        right: 0;
+        width: 2rem;
+    }
+
+    .stars {
+        visibility: collapse;
+    }
+
+    .home-page--auth-container--text-block p {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) and (max-width: 1024px) {
+    .home-page--auth-container--wrapper {
+        width: 100%;
+    }
+
+    .home-page--auth-container--text-block {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .teachers-title img {
+        right: 0;
+        width: 3rem;
+    }
+
+    .teacher-block p {
+        margin-bottom: 1rem;
+    }
+
+    .teachers-title {
+        font-size: 2.2rem;
+    }
+
+    .teacher-cards--block {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 95%;
+    }
+
+    .hero-logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: normal;
+    }
+
+    .hero-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .home-page--auth-container--wrapper {
+        flex-flow: column;
+    }
+
+    .home-page--auth-container--text-block {
+        width: 100%;
+        height: 260px;
+        margin-top: 2rem;
+    }
+
+    .home-page--auth-container--img-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .phone-img {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+}
+        

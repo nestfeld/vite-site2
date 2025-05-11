@@ -1,6 +1,32 @@
-import React from 'react'
+import React from 'react';
+import SentenceBuilder from '../../SentenceBuilder/SentenceBuilder';
+import DialogueBlock from '../../DialogueBlock/DialogueBlock';
 
 const Lesson7 = () => {
+    const sentences = [
+        { words: ["I", "have", "a", "dog"], correct: "I have a dog" },
+        { words: ["She", "saw", "an", "elephant", "at", "the", "zoo"], correct: "She saw an elephant at the zoo" },
+        { words: ["He", "found", "the", "key"], correct: "He found the key" },
+        { words: ["We", "visited", "a", "museum"], correct: "We visited a museum" },
+        { words: ["They", "met", "an", "artist"], correct: "They met an artist" }
+      ];
+      
+      const dialogues= [
+        { speaker: "Emma:", text: "Did you see a dog in the park today?", translation: "Ты видел собаку в парке сегодня?" },
+        { speaker: "Ben:", text: "Yes, I saw a dog chasing a ball.", translation: "Да, я видел собаку, гоняющуюся за мячом." },
+        { speaker: "Emma:", text: "Was it the big brown dog near the fountain?", translation: "Это была та большая коричневая собака у фонтана?" },
+        { speaker: "Ben:", text: "No, it was a small white dog with a blue collar.", translation: "Нет, это была маленькая белая собака с голубым ошейником." },
+        { speaker: "Emma:", text: "Oh, I think I saw the same one last week!", translation: "О, думаю, я видела ту же самую на прошлой неделе!" },
+        { speaker: "Ben:", text: "Yeah, it’s such a cute dog!", translation: "Да, такая милая собачка!" }
+      ];
+      
+      
+      const notes = [
+        "Используйте 'a' перед словами, начинающимися с согласного звука.",
+        "Используйте 'an' перед словами, начинающимися с гласного звука.",
+        "Используйте 'the' для чего-то конкретного или известного."
+      ];
+      
   return (
     <>
       <div class="lesson-section">
@@ -44,16 +70,29 @@ const Lesson7 = () => {
           </ul>
       </div>
 
-      <div class="lesson-section">
-          <h2>Примеры диалогов</h2>
-          <p><strong>A:</strong> I bought a new car yesterday.<br/>
-            <strong>B:</strong> Really? What kind of car is it?<br/>
-            <strong>A:</strong> It's a red Toyota.<br/>
-            <strong>B:</strong> That sounds amazing! Is it expensive?<br/>
-            <strong>A:</strong> Yes, it was a bit pricey, but it's worth it.</p>
-          <p><strong>A:</strong> Can you pass me the salt, please?<br/>
-            <strong>B:</strong> Sure, here you go. Thank you!<br/>
-            <strong>A:</strong> You're welcome.</p>
+      <SentenceBuilder
+        sentences={sentences}
+        />
+        <DialogueBlock
+        title="Диалог"
+        dialogues={dialogues}
+        notes={notes}
+      />
+
+      <div class="classroom-task-block">
+        <h2>Работа в классе: Артикли (a, an, the)</h2>
+        <p class="task-description">
+        Работайте вместе, чтобы правильно использовать артикли в английских предложениях.
+        </p>
+        <div class="task-steps">
+        <h3>Что нужно сделать:</h3>
+        <ol>
+            <li>Получите список существительных и составьте предложения с ними, используя правильные артикли (например: "a cat", "an apple", "the sun").</li>
+            <li>Проверьте друг у друга, правильно ли использованы артикли.</li>
+            <li>Придумайте короткий рассказ (5-7 предложений), используя как можно больше слов с артиклями.</li>
+            <li>Прочитайте рассказы вслух.</li>
+        </ol>
+        </div>
       </div>
 
       <div class="lesson-video-section">

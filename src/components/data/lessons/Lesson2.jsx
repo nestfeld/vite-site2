@@ -1,6 +1,31 @@
-import React from 'react'
+import React from 'react';
+import SentenceBuilder from '../../SentenceBuilder/SentenceBuilder';
+import DialogueBlock from '../../DialogueBlock/DialogueBlock';
 
 const Lesson2 = () => {
+    const sentences = [
+        { words: ["I", "visited", "my", "grandparents", "yesterday"], correct: "I visited my grandparents yesterday" },
+        { words: ["She", "watched", "a", "movie", "last", "night"], correct: "She watched a movie last night" },
+        { words: ["They", "traveled", "to", "London", "in", "2022"], correct: "They traveled to London in 2022" },
+        { words: ["He", "played", "football", "after", "school"], correct: "He played football after school" },
+        { words: ["We", "ate", "pizza", "for", "dinner"], correct: "We ate pizza for dinner" }
+      ];
+      
+      const dialogues = [
+        { speaker: "Emma:", text: "What did you do last weekend?", translation: "Что ты делал на прошлых выходных?" },
+        { speaker: "Jack:", text: "I went hiking with my friends.", translation: "Я ходил в поход с друзьями." },
+        { speaker: "Emma:", text: "Did you enjoy it?", translation: "Тебе понравилось?" },
+        { speaker: "Jack:", text: "Yes! It was amazing.", translation: "Да! Это было потрясающе." },
+        { speaker: "Emma:", text: "I stayed home and watched a movie.", translation: "Я осталась дома и посмотрела фильм." },
+        { speaker: "Jack:", text: "Sounds relaxing!", translation: "Звучит расслабляюще!" }
+      ];
+      
+      const notes = [
+        "Добавляйте окончание -ed для правильных глаголов.",
+        "Для неправильных глаголов используйте вторую форму (например, 'went', 'ate').",
+        "Past Simple используется для действий, которые произошли в прошлом."
+      ];
+      
   return (
     <>
       <div class="lesson-section">
@@ -52,19 +77,29 @@ const Lesson2 = () => {
           <p>Пример:</p>
           <p><strong>I met my friend two days ago.</strong> – Я встретил друга два дня назад.</p>
       </div>
-
-      <div class="lesson-section">
-          <h2>Примеры диалогов</h2>
-          <p><strong>A:</strong> Did you visit your grandparents last weekend?<br/>
-            <strong>B:</strong> Yes, I did. We had a great time!<br/>
-            <strong>A:</strong> Nice! Did your brother go with you?<br/>
-            <strong>B:</strong> No, he didn’t. He stayed at home.</p>
-          
-          <p><strong>A:</strong> What did you do last night?<br/>
-            <strong>B:</strong> I watched a movie and read a book.<br/>
-            <strong>A:</strong> That sounds relaxing!</p>
+      <SentenceBuilder
+        sentences={sentences}
+        />
+        <DialogueBlock
+        title="Диалог"
+        dialogues={dialogues}
+        notes={notes}
+      />
+      <div class="classroom-task-block">
+            <h2>Работа в классе: Past Simple</h2>
+            <p class="task-description">
+            Работайте в парах или маленьких группах, чтобы практиковать Past Simple! Это задание поможет вам рассказывать о событиях в прошлом на английском языке.
+            </p>
+            <div class="task-steps">
+            <h3>Что нужно сделать:</h3>
+            <ol>
+                <li>Каждый участник рассказывает о том, как провёл прошлые выходные (например: "I visited my grandparents. We played board games.").</li>
+                <li>Другие задают уточняющие вопросы в Past Simple (например: "Did you visit them by car?" "Did you cook anything together?").</li>
+                <li>Составьте вместе короткий рассказ (5-6 предложений) о чьих-то выходных и запишите его.</li>
+                <li>Презентуйте рассказ другим группам.</li>
+            </ol>
+            </div>
       </div>
-
       <div class="lesson-video-section">
           <h2>Видео-урок про <strong className='lesson-strong'>Past Simple</strong></h2>
           <p>Посмотрите это видео, чтобы лучше понять, как использовать <strong className='lesson-strong'>Past Simple</strong></p>

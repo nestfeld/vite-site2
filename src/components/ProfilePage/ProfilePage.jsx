@@ -1,10 +1,18 @@
-import React from 'react'
-import Header from '../Header/Header'
-import { useAuth } from '../../context/AuthContext'
-import "./ProfilePage.css"
+import React from 'react';
+import Header from '../Header/Header';
+import { useAuth } from '../../context/AuthContext';
+import "./ProfilePage.scss";
+import Footer from '../Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
   const {user, logout,} = useAuth();
+  const navigator = useNavigate();
+
+  const logoutAndRedirect = async() => {
+    await logout();
+    navigator('/');
+  };
 
   return (
     <>
@@ -27,10 +35,11 @@ const ProfilePage = () => {
                 ) : ('')
               }
             </div>
-            <button onClick={logout} className='profile-logout--btn'>Выйти</button>
+            <button onClick={logoutAndRedirect} className='profile-logout--btn'>Выйти</button>
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

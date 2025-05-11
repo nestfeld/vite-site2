@@ -1,0 +1,36 @@
+.menu-container{
+    width: 35%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.active-link {
+    color: #9b47ea; 
+}
+
+.menu-light {
+    display: none;
+}
+
+.menu-link{
+    font-weight: bold;
+}
+.menu-heavy{
+    width: 35%;
+    justify-content: space-between;
+    display: flex;
+}
+
+@media (max-width: 1280px) {
+   .menu-heavy {
+    display: none !important;
+   }
+   .menu-light {
+    display: block;
+   }
+
+   .menu-container{
+    width: auto;
+    display: block;
+}
+}

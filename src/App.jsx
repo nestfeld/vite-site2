@@ -9,7 +9,6 @@ import ProfilePage from './components/ProfilePage/ProfilePage';
 import ChatBotPage from './components/ChatBotPage/ChatBotPage';
 import Dictionary from './components/Dictionary/Dictionary';
 import StudyPage from './components/Study/StudyPage';
-import CreateLessonPage from './components/CreateLessonPage/CreateLessonPage';
 import TestPage from './components/Test/TestPage';
 import Test from './components/Test/Test';
 import LessonPage from './components/LessonPage/LessonPage';
@@ -26,7 +25,6 @@ const App = () => {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register/:type' element={<RegisterPage />} />
           <Route path='/chat-bot' element={<ChatBotPage />}/>
-          <Route path='/lesson-editor' element={<CreateLessonPage />}/>
           <Route path='/testpage' element={<TestPage/>} />
           <Route path='/lessons' element={<LessonPage/>} /> 
           <Route path="/study/:deckId" element={<StudyPage />} />

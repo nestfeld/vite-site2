@@ -1,0 +1,141 @@
+.sentence-builder-container {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 3rem;
+  }
+
+  .sentence-builder-title {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .drop-zone.correct {
+    border-color: #4caf50;
+    background-color: #e8f5e9;
+  }
+  
+  .drop-zone.incorrect {
+    border-color: #f44336;
+    background-color: #ffebee;
+  }
+  
+
+  .sentence-progress {
+    margin-bottom: 16px;
+  }
+  
+  .sentence-progress-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  .progress-dot.active {
+    background-color: #ad4caf;
+  }
+  
+  .word-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .word {
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    cursor: grab;
+    user-select: none;
+    transition: background-color 0.3s;
+  }
+  
+  .word.used {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .drop-zone {
+    min-height: 60px;
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .user-word {
+    padding: 10px 15px;
+    background-color: #90caf9;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .button-check {
+    background-color: #904caf;
+    color: white;
+  }
+  
+  .button-retry {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .feedback {
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  
+  .feedback.correct {
+    color: #4caf50;
+  }
+  
+  .feedback.incorrect {
+    color: #f44336;
+  }
+  
+  .feedback-hint {
+    font-style: italic;
+    color: #888;
+    margin-top: 4px;
+  }
+  
+  .completion {
+    text-align: center;
+    padding: 40px;
+    border-radius: 25px;
+    background-color: #c3ffc5;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  

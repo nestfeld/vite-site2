@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Test.css';
+import './Test.scss';
 import Header from '../Header/Header';
 import { Link, useParams } from 'react-router-dom';
 import tests from '../data/tests.jsx'; // Импортируем данные тестов
@@ -14,7 +14,8 @@ export const Test = () => {
 
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(null);
-  const [wrongAnswers, setWrongAnswers] = useState([]); // Отслеживание неверных ответов
+  const [wrongAnswers, setWrongAnswers] = useState([]);
+  const [hoveredQuestionId, setHoveredQuestionId] = useState(null); // Для подсветки правильного ответа
 
   const dificultyMatch = {
     '1': ['🌱', 'Начальный'],
@@ -49,6 +50,8 @@ export const Test = () => {
     setWrongAnswers(newWrongAnswers);
   };
 
+  const isFormDirty = Object.keys(answers).length > 0;
+
   return (
     <div className="appContainerMain">
       <Header />
@@ -59,20 +62,32 @@ export const Test = () => {
         }}
       >
         <div className="quiz-container">
-          <h2 className='test-name'> 
+          <h2 className='test-name'>
             <Link to='/testpage' style={{ color: '#AA18CA' }} title='Назад'>←</Link> {test.testName}
           </h2>
           <p className='testDescription'>Уровень теста: <b>{dificultyMatch[test.testDificulty][1]}</b></p>
           <form onSubmit={handleSubmit}>
             {test.questions.map((question) => (
-              <div 
-                key={question.id} 
+              <div
+                key={question.id}
                 className={`question ${wrongAnswers.includes(question.id) ? 'wrong-answer' : ''}`}
+                onMouseEnter={() => setHoveredQuestionId(question.id)}
+                onMouseLeave={() => setHoveredQuestionId(null)}
               >
                 <p>{question.question}</p>
                 <div className="options-container">
                   {Object.keys(question.options).map((key) => (
-                    <label key={key} style={{ display: "flex", alignItems: "center" }}>
+                    <label
+                      key={key}
+                      className={
+                        wrongAnswers.includes(question.id) &&
+                        hoveredQuestionId === question.id &&
+                        key === question.answer
+                          ? 'correct-answer-hover'
+                          : ''
+                      }
+                      style={{ display: "flex", alignItems: "center" }}
+                    >
                       <input
                         type="radio"
                         name={question.id}
@@ -87,11 +102,13 @@ export const Test = () => {
                 </div>
               </div>
             ))}
-            <button className="test-submit-btn" type="submit">Отправить</button>
+            <button className="test-submit-btn test-sumbit-btn-first" type="submit">Отправить</button>
           </form>
+
+          {/* Добавлен блок отображения счёта */}
           {score !== null && (
             <div className={`score ${score === test.questions.length ? 'full-score' : ''}`}>
-              <h3>Ваш счет: {score} / {test.questions.length}</h3>
+              <h3>Ваш счёт: {score} / {test.questions.length}</h3>
             </div>
           )}
         </div>

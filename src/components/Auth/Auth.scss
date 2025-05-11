@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .auth-form{
     background-color: white;
-    padding: 0px 5%;
+    padding: 2rem 3rem;
     min-height: 80%;
     background: rgb(252,252,252);
     background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgb(216, 216, 216) 100%);

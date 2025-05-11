@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import "./Menu.scss";
 
-const Menu = () => {
+const MenuLight = () => {
   const {logout} = useAuth();
   const location = useLocation();
   const navigator = useNavigate();
@@ -13,7 +13,6 @@ const Menu = () => {
     await logout();
     navigator('/');
   };
-
 
   const isActive = (pathPart) =>
     location.pathname.includes(pathPart) ? 'active-link menu-link' : 'menu-link';
@@ -25,33 +24,47 @@ const Menu = () => {
       ),
       key: '0',
     },
-
     {
       label: (
         <Link to="/">Главная</Link>
       ),
       key: '1',
     },
-    
     {
       label: (
-        <Link to="/chat-bot">Чат-бот</Link>
+        <Link to="/lessons">Уроки</Link>
       ),
       key: '2',
     },
     {
       label: (
-        <a onClick={logoutAndRedirect}>Выйти</a>
+        <Link to="/testpage">Тесты</Link>
       ),
       key: '3',
     },
+    {
+      label: (
+        <Link to="/dictionary">Мой словарь</Link>
+      ),
+      key: '4',
+    },
+    {
+      label: (
+        <Link to="/chat-bot">Чат-бот</Link>
+      ),
+      key: '5',
+    },
+    {
+      label: (
+        <a onClick={logoutAndRedirect}>Выйти</a>
+      ),
+      key: '6',
+    },
   ];
+  
 
   return (
-    <div className=' menu-heavy'>
-      <Link to="/lessons" className={isActive('/lessons')}>Уроки</Link>
-      <Link to="/testpage" className={isActive('/testpage')}>Тесты</Link>
-      <Link to="/dictionary" className={isActive('/dictionary')}>Мой словарь</Link>
+    <div className='menu-container menu-light'>
       <Dropdown
         className='dropdown'
         menu={{
@@ -70,4 +83,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default MenuLight;

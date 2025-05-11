@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from "react";
-import "./Auth.css";
+import "./Auth.scss";
 import groups from "../data/groups";
 import { useParams } from "react-router-dom";
 
@@ -18,7 +18,6 @@ const RegisterPage = () => {
       backgroundPosition: 'center center',
       backgroundAttachment: 'fixed',
       width: '100%',
-      height: '100vh',
   }
 
   const [email, setEmail] = useState("");

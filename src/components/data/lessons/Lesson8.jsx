@@ -1,6 +1,32 @@
-import React from 'react'
+import React from 'react';
+import SentenceBuilder from '../../SentenceBuilder/SentenceBuilder';
+import DialogueBlock from '../../DialogueBlock/DialogueBlock';
 
 const Lesson8 = () => {
+    const sentences = [
+        { words: ["Turn", "off", "the", "light"], correct: "Turn off the light" },
+        { words: ["Pick", "up", "the", "phone"], correct: "Pick up the phone" },
+        { words: ["Look", "after", "the", "baby"], correct: "Look after the baby" },
+        { words: ["Give", "up", "smoking"], correct: "Give up smoking" },
+        { words: ["Come", "back", "home", "early"], correct: "Come back home early" }
+      ];
+      
+      const dialogues = [
+        { speaker: "Jake:", text: "Hey Lisa, did you figure out the math homework?", translation: "Привет, Лиза, ты разобралась с домашним заданием по математике?" },
+        { speaker: "Lisa:", text: "Not yet. I’m trying to work it out right now.", translation: "Ещё нет. Я сейчас пытаюсь разобраться." },
+        { speaker: "Jake:", text: "If you need help, just reach out to me.", translation: "Если понадобится помощь, просто обратись ко мне." },
+        { speaker: "Lisa:", text: "Thanks! I’ll call you if I get stuck.", translation: "Спасибо! Я позвоню тебе, если застряну." },
+        { speaker: "Jake:", text: "No problem. Sometimes I also mess up with numbers.", translation: "Без проблем. Иногда я тоже путаюсь в цифрах." },
+        { speaker: "Lisa:", text: "Good to know I’m not the only one!", translation: "Хорошо знать, что я не одна такая!" }
+      ];
+      
+      
+      const notes = [
+        "Phrasal verbs состоят из глагола + предлога/наречия.",
+        "Они могут менять значение глагола полностью (например, 'give up' = 'бросить').",
+        "Некоторые фразовые глаголы можно разделить: 'pick up the phone' или 'pick the phone up'."
+      ];
+      
   return (
     <>
       <div class="lesson-section">
@@ -62,13 +88,28 @@ const Lesson8 = () => {
           </ul>
       </div>
 
-      <div class="lesson-section">
-          <h2>Примеры диалогов с фразовыми глаголами</h2>
-          <p><strong>A:</strong> Can you pick up some milk on your way home?<br/>
-            <strong>B:</strong> Sure, I’ll pick it up at the store.</p>
-
-          <p><strong>A:</strong> I’ve been trying to learn guitar, but I’m thinking of giving up.<br/>
-            <strong>B:</strong> Don’t give up! You’ll get better with practice.</p>
+      <SentenceBuilder
+        sentences={sentences}
+        />
+        <DialogueBlock
+        title="Диалог"
+        dialogues={dialogues}
+        notes={notes}
+      />
+        <div class="classroom-task-block">
+        <h2>Работа в классе: Фразовые глаголы</h2>
+        <p class="task-description">
+        Работайте в группах, чтобы практиковать распространённые фразовые глаголы в английском языке.
+        </p>
+        <div class="task-steps">
+        <h3>Что нужно сделать:</h3>
+        <ol>
+            <li>Каждой группе достаются 5 фразовых глаголов (например: "get up", "look for", "give up").</li>
+            <li>Придумайте и запишите по одному предложению для каждого глагола.</li>
+            <li>Сыграйте в мини-игру: одна группа загадывает фразовый глагол, объясняя его значение без использования самого глагола, а другие группы угадывают.</li>
+            <li>Побеждает группа, угадавшая больше всего фразовых глаголов!</li>
+        </ol>
+        </div>
       </div>
 
       <div class="lesson-video-section">

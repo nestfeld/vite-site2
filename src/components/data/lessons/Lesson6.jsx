@@ -1,6 +1,33 @@
-import React from 'react'
+import React from 'react';
+import SentenceBuilder from '../../SentenceBuilder/SentenceBuilder';
+import DialogueBlock from '../../DialogueBlock/DialogueBlock';
 
 const Lesson6 = () => {
+    const sentences = [
+        { words: ["He", "said", "that", "he", "was", "tired"], correct: "He said that he was tired" },
+        { words: ["She", "told", "me", "she", "loved", "music"], correct: "She told me she loved music" },
+        { words: ["They", "said", "they", "had", "finished", "work"], correct: "They said they had finished work" },
+        { words: ["I", "asked", "if", "she", "was", "ready"], correct: "I asked if she was ready" },
+        { words: ["We", "said", "we", "would", "come", "later"], correct: "We said we would come later" }
+      ];
+      
+      const dialogues = [
+        { speaker: "Teacher:", text: "What did Sarah say about the meeting?", translation: "Что сказала Сара о встрече?" },
+        { speaker: "Student:", text: "She said that the meeting was postponed.", translation: "Она сказала, что встреча была перенесена." },
+        { speaker: "Teacher:", text: "Did she mention the new date?", translation: "Она упомянула новую дату?" },
+        { speaker: "Student:", text: "Yes, she said it would be next Friday.", translation: "Да, она сказала, что это будет в следующую пятницу." },
+        { speaker: "Teacher:", text: "And what did Tom say?", translation: "А что сказал Том?" },
+        { speaker: "Student:", text: "Tom said he couldn't come because he had another meeting.", translation: "Том сказал, что он не сможет прийти, потому что у него другая встреча." },
+        { speaker: "Teacher:", text: "Alright, thanks for the update!", translation: "Хорошо, спасибо за обновление!" }
+      ];
+      
+      
+      const notes = [
+        "В Reported Speech часто меняются времена: Present → Past.",
+        "Слова меняются: 'today' → 'that day', 'tomorrow' → 'the next day'.",
+        "Используйте 'said', 'told', 'asked' для начала косвенной речи."
+      ];
+      
   return (
     <>
       <div class="lesson-section">
@@ -47,18 +74,29 @@ const Lesson6 = () => {
           </ul>
       </div>
 
-      <div class="lesson-section">
-          <h2>Примеры диалогов</h2>
-          <p><strong>A:</strong> "I can't come to the meeting tomorrow."<br/>
-            <strong>B:</strong> He said that he couldn’t come to the meeting tomorrow.<br/>
-            <strong>A:</strong> "I have to finish my project."<br/>
-            <strong>B:</strong> She said that she had to finish her project.</p>
-          <p><strong>A:</strong> "I will visit my grandmother next week."<br/>
-            <strong>B:</strong> He said that he would visit his grandmother next week.<br/>
-            <strong>A:</strong> "I don't like horror movies."<br/>
-            <strong>B:</strong> She said that she didn’t like horror movies.</p>
+      <SentenceBuilder
+        sentences={sentences}
+        />
+        <DialogueBlock
+        title="Диалог"
+        dialogues={dialogues}
+        notes={notes}
+      />
+      <div class="classroom-task-block">
+        <h2>Работа в классе: Косвенная речь</h2>
+        <p class="task-description">
+        Работайте в парах или группах, чтобы научиться передавать слова других людей на английском языке, используя косвенную речь (Reported Speech).
+        </p>
+        <div class="task-steps">
+        <h3>Что нужно сделать:</h3>
+        <ol>
+            <li>Один участник говорит фразу (например: "I am tired.").</li>
+            <li>Другой участник передает эту фразу в косвенной речи (например: "He said that he was tired.").</li>
+            <li>Поменяйтесь ролями после каждой фразы.</li>
+            <li>Запишите 5 примеров косвенной речи от своей группы и прочитайте их вслух.</li>
+        </ol>
+        </div>
       </div>
-
       <div class="lesson-video-section">
           <h2>Видео-урок про <strong className='lesson-strong'>Косвенную речь</strong></h2>
           <p>Посмотрите это видео, чтобы лучше понять, как использовать косвенную речь:</p>

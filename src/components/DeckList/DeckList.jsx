@@ -1,5 +1,5 @@
 import React from 'react';
-import "./DeckList.css";
+import "./DeckList.scss";
 import DeckListItem from '../DeckListItem/DeckListItem';
 import { useDecks } from '../../context/DeckContext';
 
@@ -28,7 +28,12 @@ const DeckList = () => {
             />
           ))
         ) : (
-          "Колод пока нету"
+          <div className='empty-list'>
+            <p>
+              Нажмите на кнопку создать, <br/>
+              чтобы добавить новую колоду
+            </p>
+          </div>
         )}
       </div>
       <div className="deck-list-footer">

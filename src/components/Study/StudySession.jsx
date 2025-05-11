@@ -4,7 +4,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../config/firebase-config";
 import { useNavigate } from "react-router-dom"; // Для перехода на другую страницу
 import Arrow from './Arrow';
-import "./StudySession.css";
+import "./StudySession.scss";
 
 const StudySession = ({ deckId }) => {
   const [cards, setCards] = useState([]);

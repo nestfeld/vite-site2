@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from '../Header/Header';
 import tests from "../data/tests";
-import './Test.css'
+import './Test.scss'
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const TestPage = () => {
   const dificultyMatch = {
@@ -46,6 +47,7 @@ const TestPage = () => {
             </div>
           </section>
         </div>
+        <Footer/>
       </div>
     </>
   )

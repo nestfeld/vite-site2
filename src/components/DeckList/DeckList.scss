@@ -6,6 +6,7 @@
     box-shadow: 3px 1px 10px 5px rgb(209, 209, 209);
     display: flex;
     flex-flow: column;
+    user-select: none;
 }
 
 .deck-list-header{
@@ -44,4 +45,17 @@
 .deck-list-footer .create {
     background-color: #9F70FF;
     color: white;
+}
+
+.empty-list{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.empty-list p {
+    color: rgba(0, 0, 0, 0.479);
 }

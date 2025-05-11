@@ -1,6 +1,6 @@
 import bg from "./bg.jpg";
 import LoginLogo from "./authPageLogo.svg";
-import "./Auth.css";
+import "./Auth.scss";
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { auth } from "../../config/firebase-config";  // Предполагается, что вы настроили Firebase

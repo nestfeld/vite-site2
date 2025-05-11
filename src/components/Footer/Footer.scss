@@ -1,0 +1,41 @@
+footer {
+    width: 100%;
+    padding: 2rem 0rem;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+footer span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem
+}
+
+.footer-logo img {
+    margin-right: 5px;
+}
+
+.footer-info p {
+    color:  white;
+    font-size: 15px;
+}
+
+.footer-upper{
+    display: flex;
+    padding-bottom: 1.2rem;
+    border-bottom: solid 1px white;
+}
+
+.footer-down p {
+    margin-top: 1rem;
+    color: white;
+}

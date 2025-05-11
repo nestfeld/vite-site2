@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./Deck.css";
+import "./Deck.scss";
 import { addDoc, collection, getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { useDecks } from '../../context/DeckContext';
 import { db } from '../../config/firebase-config';
@@ -151,7 +151,7 @@ const Deck = () => {
       <button onClick={() => {console.log(deckList)}}>лог деки</button> */}
 
       
-      {activeDeck ? (
+      {activeDeck ? ( 
         <>
           <div className="deck-header">
             <h2>{activeDeck?.name}</h2>
@@ -211,9 +211,17 @@ const Deck = () => {
           </div>
         </>
       ) : (
-        <div className="deck-header">
-          <h2>Колода не выбрана</h2>
-        </div>
+        <>
+          <div className="deck-header">
+            <h2>Колода не выбрана</h2>
+          </div>
+          <div className='empty-list'>
+            <p>
+              Выберите колоду, <br/>
+              чтобы ее настроить 
+            </p>
+          </div>
+        </>
       )}
     </section>
   );

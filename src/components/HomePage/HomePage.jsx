@@ -1,15 +1,16 @@
 import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
-import "./HomePage.css";
+import "./HomePage.scss";
 import logo from "../Header/logo.svg";
 import bg from "./bg.jpg";
 import stars from "./stars.png";
+import phone from "./phone.png";
 import slides from "../data/slidesData";
 import star from './star.svg';
-import footerLogo from "./footer-logo.svg";
-import author1 from "./author1.png"
-import author2 from "./author2.png"
-import author3 from "./author3.png"
+import author1 from "./author1.png";
+import author2 from "./author2.png";
+import author3 from "./author3.png";
+import Footer from '../Footer/Footer.jsx';
 
 const HomePage = () => {
 
@@ -53,6 +54,18 @@ const HomePage = () => {
           <Link to="/register/student"><button className='hero-btn'>Начать!</button></Link>
         </div>
       </div>
+      <div className="home-page--auth-container">
+        <div className="home-page--auth-container--wrapper">
+          <div className="home-page--auth-container--text-block">
+            <p><span>Авторизуйся</span>, чтобы получить полный доступ 
+            к функциям сайта и начать свое обучение!</p>
+            <Link to="/login/"><button className='hp-auth-btn'>Войти</button></Link>
+          </div>
+          <div className="home-page--auth-container--img-container">
+            <img src={phone} alt="phone-img" className='phone-img' />
+          </div>
+        </div>
+      </div>
       <div className='teachers-container'>
         <div className="teachers-title">
           Наши преподаватели <img src={stars} alt="stars" className='stars'/>
@@ -89,12 +102,7 @@ const HomePage = () => {
             ))}
           </div>
       </div>
-      <footer>
-        <Link to="/login" className='footer'>
-          <img src={footerLogo} alt="logo" />
-          <span>Язык.учи</span>
-        </Link>
-      </footer>
+      <Footer/>
     </>
   )
 }

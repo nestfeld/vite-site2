@@ -1,8 +1,9 @@
 import logo from './logo.svg';
-import "./Header.css";
+import "./Header.scss";
 import Menu from '../Menu/Menu';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import MenuLight from '../Menu/MenuLight';
 
 function Header() {
   const {user} = useAuth();
@@ -17,7 +18,12 @@ function Header() {
               <h1 className="header--title">Язык.учи</h1>
             </Link>
           </div>
-          {user ? <Menu /> : 
+          {user ? (
+            <>
+              <MenuLight/>
+              <Menu />
+            </>
+          ) : 
             <div>
               <Link to="/login">
                 <button className='header-login-button'>Войти</button>

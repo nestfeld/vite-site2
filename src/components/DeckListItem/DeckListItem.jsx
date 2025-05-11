@@ -1,5 +1,5 @@
 import React from 'react';
-import "./DeckListItem.css";
+import "./DeckListItem.scss";
 import { Link } from 'react-router-dom'; 
 
 // Определяем компонент DeckListItem

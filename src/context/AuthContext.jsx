@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
         const userDoc = await getDoc(doc(db, "users", currentUser.uid));
         if (userDoc) {
           const userData = userDoc.data();
-          console.log("USER DATAAAA⚡⚡", userData);
+          console.log("user data:", userData);
           setUser({
             uid: currentUser.uid,
             email: currentUser.email,
@@ -36,14 +36,13 @@ export const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, fetchUserData);
   
     return () => {
-      console.log("🔴 Компонент размонтируется! Отписка...");
       unsubscribe();
     };
   }, []);
   
 
-  const logout = () => {
-    signOut(auth);
+  const logout = async () => {
+    await signOut(auth);
   }
 
   return (

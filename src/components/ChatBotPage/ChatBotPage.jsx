@@ -1,6 +1,6 @@
 import Header from '../Header/Header';
-import { useRef, useState, useEffect } from 'react';
-import './ChatBotPage.css';
+import { useRef, useEffect } from 'react';
+import './ChatBotPage.scss';
 import ChatMessage from './ChatMessage';
 import sendIco from './send.svg';
 import { info, initialMessage } from './botinfo';
@@ -27,8 +27,6 @@ const ChatBotPage = () => {
 
     history = history.map(({ role, text }) => ({ role, parts: [{ text }] }));
 
-    console.log(import.meta.env.VITE_API_URL);
-    
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

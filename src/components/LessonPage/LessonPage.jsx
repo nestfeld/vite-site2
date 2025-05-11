@@ -1,8 +1,9 @@
-import React from 'react'
-import Header from '../Header/Header'
-import './LessonPage.css'
-import lessons from '../data/lessons'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import Header from '../Header/Header';
+import './LessonPage.scss';
+import lessons from '../data/lessons';
+import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const LessonPage = () => {
   return (
@@ -28,6 +29,7 @@ const LessonPage = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

@@ -1,6 +1,29 @@
-import React from 'react'
+import React from 'react';
+import SentenceBuilder from '../../SentenceBuilder/SentenceBuilder';
+import DialogueBlock from '../../DialogueBlock/DialogueBlock';
 
 const Lesson4 = () => {
+  const sentences = [
+    { words: ["You", "should", "drink", "more", "water"], correct: "You should drink more water" },
+    { words: ["Can", "you", "help", "me", "please"], correct: "Can you help me please" },
+    { words: ["He", "must", "finish", "his", "homework"], correct: "He must finish his homework" },
+    { words: ["We", "could", "go", "to", "the", "beach"], correct: "We could go to the beach" },
+    { words: ["She", "might", "visit", "us", "next", "week"], correct: "She might visit us next week" }
+  ];
+  
+  const dialogues = [
+    { speaker: "Olivia:", text: "Can you open the window?", translation: "Можешь открыть окно?" },
+    { speaker: "Noah:", text: "Sure! It’s very hot here.", translation: "Конечно! Здесь очень жарко." },
+    { speaker: "Olivia:", text: "We should buy a fan.", translation: "Нам стоит купить вентилятор." },
+    { speaker: "Noah:", text: "Good idea. We must go shopping tomorrow.", translation: "Хорошая идея. Мы должны пойти за покупками завтра." }
+  ];
+  
+  const notes = [
+    "Modal verbs (can, should, must) используются без 'to'.",
+    "Они показывают возможность, необходимость или совет.",
+    "После модального глагола идет основной глагол без изменений."
+  ];
+  
   return (
     <>
       <div class="lesson-section">
@@ -26,18 +49,29 @@ const Lesson4 = () => {
           </ul>
       </div>
 
-      <div class="lesson-section">
-          <h2>Примеры диалогов</h2>
-          <p><strong>A:</strong> Can you play the guitar?<br/>
-            <strong>B:</strong> Yes, I can. I learned it last year.<br/>
-            <strong>A:</strong> Great! You should play something for us!<br/>
-            <strong>B:</strong> Okay, I will!</p>
-          
-          <p><strong>A:</strong> Must we finish the project today?<br/>
-            <strong>B:</strong> Yes, we must. The deadline is tomorrow.<br/>
-            <strong>A:</strong> Alright, let’s get to work!</p>
+      <SentenceBuilder
+        sentences={sentences}
+        />
+        <DialogueBlock
+        title="Диалог"
+        dialogues={dialogues}
+        notes={notes}
+      />
+      <div class="classroom-task-block">
+          <h2>Работа в классе: Модальные глаголы (can, must, should)</h2>
+          <p class="task-description">
+          Работайте в группах, чтобы практиковать модальные глаголы! Вы научитесь советовать, разрешать и указывать обязанности на английском языке.
+          </p>
+          <div class="task-steps">
+          <h3>Что нужно сделать:</h3>
+          <ol>
+              <li>Обсудите ситуации (например: "A new student at school", "Preparing for an exam") и дайте советы с помощью "should", "must", "can".</li>
+              <li>Каждый пишет 2 совета для одной ситуации (например: "You should make new friends." "You must be on time.").</li>
+              <li>Обменяйтесь советами с другими группами.</li>
+              <li>Сделайте короткую презентацию о правилах поведения для новой школы/класса.</li>
+          </ol>
+          </div>
       </div>
-
       <div class="lesson-video-section">
           <h2>Видео-урок про <strong className='lesson-strong'>Модальные глаголы</strong></h2>
           <p>Посмотрите это видео, чтобы лучше понять, как использовать <strong className='lesson-strong'>модальные глаголы</strong></p>
