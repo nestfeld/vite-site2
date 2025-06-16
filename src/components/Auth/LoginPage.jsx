@@ -1,4 +1,4 @@
-import bg from "./bg.jpg";
+import bg from "./bg.webp";
 import LoginLogo from "./authPageLogo.svg";
 import "./Auth.scss";
 import { Link, useNavigate } from 'react-router-dom';
