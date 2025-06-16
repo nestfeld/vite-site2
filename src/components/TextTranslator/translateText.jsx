@@ -1,5 +1,5 @@
 export const translateText = async (text) => {
-  const apiKeyTranslate = process.env.VITE_TRANSLATE_API_KEY; // API-ключ для Google Translate
+  const apiKeyTranslate = import.meta.env.VITE_TRANSLATE_API_KEY; // API-ключ для Google Translate
   const url = `https://translation.googleapis.com/language/translate/v2`;
   const params = new URLSearchParams({
     q: text,
