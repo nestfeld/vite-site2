@@ -78,6 +78,10 @@ const SentenceBuilder = ({sentences}) => {
               key={word}
               draggable
               onDragStart={(e) => onDragStart(e, word)}
+              onClick={() => {
+                if (!userSentence.includes(word)) {
+                  setUserSentence([...userSentence, word]);
+                }
               className={`word ${userSentence.includes(word) ? "used" : ""}`}
             >
               {word}
