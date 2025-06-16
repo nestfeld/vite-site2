@@ -1,4 +1,4 @@
-import bg from "./bg.jpg";
+import bg from "./bg.webp";
 import LoginLogo from "./authPageLogo.svg";
 import { auth, db } from "../../config/firebase-config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
