@@ -2,7 +2,7 @@ import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 import "./HomePage.scss";
 import logo from "../Header/logo.svg";
-import bg from "./bg.jpg";
+import bg from "./bg.webp";
 import stars from "./stars.png";
 import phone from "./phone.png";
 import slides from "../data/slidesData";
